@@ -37,6 +37,7 @@ pipeline
         {
             steps
             {
+                input message: 'Aprroval From Delivery Manager', submitter: 'Radha'
                 deploy adapters: [tomcat9(credentialsId: 'b9c4f564-54e0-4d36-b0bb-74a2a57eb2ca', path: '', url: 'http://172.31.47.49:8080')], contextPath: 'prodapp1', war: '**/*.war'
             }
         }
